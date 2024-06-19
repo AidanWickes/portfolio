@@ -12,6 +12,7 @@
     "develop": "concurrently -r \"npm run dev\" \"npm run storybook\""
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.11",
     "next": "14.2.4",
