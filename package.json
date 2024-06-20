@@ -10,7 +10,8 @@
         "storybook": "storybook dev --quiet -p 6006",
         "build-storybook": "storybook build",
         "develop": "concurrently -r \"npm run dev\" \"npm run storybook\"",
-        "prepare": "husky"
+        "prepare": "husky",
+        "generate": "plop --plopfile ./.plop/plopfile.js"
     },
     "dependencies": {
         "@heroicons/react": "^2.1.4",
@@ -45,6 +46,7 @@
         "eslint-plugin-storybook": "^0.8.0",
         "husky": "^9.0.11",
         "lint-staged": "^15.2.7",
+        "plop": "^4.0.1",
         "postcss": "^8.4.38",
         "prettier": "^3.3.2",
         "prettier-plugin-organize-imports": "^3.2.4",
