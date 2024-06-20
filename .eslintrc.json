@@ -6,7 +6,8 @@
         "jest": true
     },
     "globals": {
-        "React": true
+        "React": true,
+        "JSX": "readonly"
     },
     "extends": [
         "airbnb",

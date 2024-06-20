@@ -1,14 +1,16 @@
-import { Meta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
+
 import { fn } from '@storybook/test'
 import { Button } from './Button'
 
-const meta = {
-    title: 'Button',
+const meta: Meta<typeof Button> = {
+    title: 'Atoms/Button',
     component: Button,
-    parameters: {
-        layout: 'centered',
-    },
     tags: ['autodocs'],
+    args: {
+        children: 'Example',
+        onClick: fn(),
+    },
     argTypes: {
         variant: {
             name: 'Button Variant',
@@ -20,22 +22,20 @@ const meta = {
             },
         },
     },
-    args: { onClick: fn() },
-} satisfies Meta<typeof Button>
+}
 
 export default meta
-type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+type Story = StoryObj<typeof Button>
+
+export const Default: Story = {
     args: {
         variant: 'primary',
-        label: 'Button',
     },
 }
 
 export const Secondary: Story = {
     args: {
         variant: 'secondary',
-        label: 'Button',
     },
 }
