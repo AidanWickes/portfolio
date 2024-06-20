@@ -11,11 +11,9 @@ export const Button = ({
     label,
     ...props
 }: ButtonProps) => {
-    let variantClasses = cn([
+    const variantClasses = cn([
         'border p-4',
-        {
-            'bg-black text-white': variant === 'primary',
-        },
+        { 'bg-black text-white': variant === 'primary' },
     ])
 
     return <button className={cn([variantClasses])}>{label}</button>
