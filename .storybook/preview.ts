@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react'
-import '../src/app/globals.css'
+import '../src/styles/globals.css'
 
 import { withThemeByClassName } from '@storybook/addon-themes'
 

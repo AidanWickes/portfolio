@@ -3,7 +3,7 @@
         "prettier-plugin-organize-imports",
         "prettier-plugin-tailwindcss"
     ],
-    "tailwindFunctions": ["cn"],
+    "tailwindFunctions": ["cn", "cva"],
     "trailingComma": "es5",
     "tabWidth": 4,
     "semi": false,
