@@ -1,9 +1,7 @@
+import { zilla } from '@/lib/fonts'
 import { cn } from '@/lib/utils/cn'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -17,7 +15,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn('min-h-screen antialiased', inter.className)}>
+            <body
+                className={cn(
+                    'min-h-screen font-sans antialiased',
+                    zilla.variable
+                )}
+            >
                 {children}
             </body>
         </html>

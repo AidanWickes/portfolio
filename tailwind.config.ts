@@ -1,20 +1,5 @@
 import type { Config } from 'tailwindcss'
 
-const {
-    default: flattenColorPalette,
-} = require('tailwindcss/lib/util/flattenColorPalette')
-
-function addVariablesForColors({ addBase, theme }: any) {
-    const allColors = flattenColorPalette(theme('colors'))
-    const newVars = Object.fromEntries(
-        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-    )
-
-    addBase({
-        ':root': newVars,
-    })
-}
-
 const config: Config = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -126,6 +111,151 @@ const config: Config = {
             },
         },
         extend: {
+            fontFamily: {
+                sans: ['var(--font-zilla)'],
+            },
+            fontSize: {
+                'h1-lg': [
+                    '80px',
+                    {
+                        fontWeight: '700',
+                        lineHeight: '96px',
+                    },
+                ],
+                'h1-sm': [
+                    '48px',
+                    {
+                        fontWeight: '700',
+                        lineHeight: '60px',
+                    },
+                ],
+                'h2-lg': [
+                    '68px',
+                    {
+                        fontWeight: '700',
+                        lineHeight: '84px',
+                    },
+                ],
+                'h2-sm': [
+                    '40px',
+                    {
+                        fontWeight: '700',
+                        lineHeight: '48px',
+                    },
+                ],
+                'h3-lg': [
+                    '60px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '72px',
+                    },
+                ],
+                'h3-sm': [
+                    '36px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '44px',
+                    },
+                ],
+                'h4-lg': [
+                    '52px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '64px',
+                    },
+                ],
+                'h4-sm': [
+                    '32px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '40px',
+                    },
+                ],
+                'h5-lg': [
+                    '44px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '52px',
+                    },
+                ],
+                'h5-sm': [
+                    '28px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '36px',
+                    },
+                ],
+                'h6-lg': [
+                    '36px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '44px',
+                    },
+                ],
+                'h6-sm': [
+                    '24px',
+                    {
+                        fontWeight: '600',
+                        lineHeight: '32px',
+                    },
+                ],
+                'title-lg': [
+                    '28px',
+                    {
+                        fontWeight: '400',
+                        lineHeight: '36px',
+                    },
+                ],
+                'title-sm': [
+                    '20px',
+                    {
+                        fontWeight: '400',
+                        lineHeight: '28px',
+                    },
+                ],
+                'body-lg': [
+                    '24px',
+                    {
+                        fontWeight: '400',
+                        lineHeight: '32px',
+                    },
+                ],
+                'body-sm': [
+                    '18px',
+                    {
+                        fontWeight: '400',
+                        lineHeight: '24px',
+                    },
+                ],
+                'button-lg': [
+                    '24px',
+                    {
+                        fontWeight: '700',
+                        lineHeight: '32px',
+                    },
+                ],
+                'button-sm': [
+                    '18px',
+                    {
+                        fontWeight: '700',
+                        lineHeight: '24px',
+                    },
+                ],
+                'caption-lg': [
+                    '20px',
+                    {
+                        fontWeight: '400',
+                        lineHeight: '24px',
+                    },
+                ],
+                'caption-sm': [
+                    '16px',
+                    {
+                        fontWeight: '400',
+                        lineHeight: '20px',
+                    },
+                ],
+            },
             spacing: {
                 '1x': '8px',
                 '2x': '16px',
@@ -136,14 +266,8 @@ const config: Config = {
                 '12x': '96px',
                 '16x': '128px',
             },
-            backgroundImage: {
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'gradient-conic':
-                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-            },
         },
     },
-    plugins: [addVariablesForColors],
 }
 
 export default config

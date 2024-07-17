@@ -1,7 +1,6 @@
 import type { Preview } from '@storybook/react'
+import { zilla } from '../src/lib/fonts'
 import '../src/styles/globals.css'
-
-import { withThemeByClassName } from '@storybook/addon-themes'
 
 const preview: Preview = {
     parameters: {
@@ -14,14 +13,11 @@ const preview: Preview = {
     },
 
     decorators: [
-        withThemeByClassName({
-            themes: {
-                // nameOfTheme: 'classNameForTheme',
-                light: '',
-                dark: 'dark',
-            },
-            defaultTheme: 'light',
-        }),
+        (Story) => (
+            <div className={`font-sans ${zilla.variable}`}>
+                <Story />
+            </div>
+        ),
     ],
 }
 
