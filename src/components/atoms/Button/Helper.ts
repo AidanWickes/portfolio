@@ -1,7 +1,7 @@
 import { cva } from 'cva'
 
 export const buttonStyles = cva({
-    base: 'elevation-2 active:elevation-surface flex gap-2 text-button-lg sm:text-button-sm',
+    base: 'elevation-2 active:elevation-surface flex items-center justify-center gap-2 text-button-lg sm:text-button-sm',
     variants: {
         intent: {
             primary: 'bg-amethyst hover:bg-amethyst-30 active:bg-amethyst-30',

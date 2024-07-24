@@ -6,7 +6,8 @@ export default function Home() {
     return (
         <>
             <Button intent="secondary">
-                Button Label <Icon icon="ChevronRightIcon" />
+                <Typography variant="button">Button Label</Typography>
+                <Icon icon="ChevronRightIcon" />
             </Button>
             <Typography variant="h1">Test</Typography>
         </>
