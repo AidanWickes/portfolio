@@ -28,6 +28,7 @@
         "import/extensions": "off",
         "curly": ["error", "multi"],
         "react/button-has-type": "off",
+        "react/jsx-uses-react": 0,
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": "off",
         "import/prefer-default-export": "warn",
