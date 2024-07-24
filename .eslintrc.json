@@ -29,7 +29,7 @@
         "curly": ["error", "multi"],
         "react/button-has-type": "off",
         "react/jsx-uses-react": 0,
-        "react/react-in-jsx-scope": "off",
+        "react/react-in-jsx-scope": 0,
         "react/jsx-filename-extension": "off",
         "import/prefer-default-export": "warn",
         "semi": 0, // let it handle by prettier
